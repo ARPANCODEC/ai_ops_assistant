@@ -12,7 +12,7 @@ Real API integrations
 
 One-command local execution
 
-📁 Folder Structure
+Folder Structure
 ai_ops_assistant/                 # Root project directory
 │
 ├── agents/                       # Core multi-agent logic
@@ -35,11 +35,11 @@ ai_ops_assistant/                 # Root project directory
 ├── .env.example                  # Environment variable template
 └── README.md                     # Project documentation
 
-🚀 Setup Instructions (Run Locally)
-1️⃣ Install Dependencies
+ Setup Instructions (Run Locally)
+1️. Install Dependencies
 pip install -r requirements.txt
 
-2️⃣ Configure Environment Variables
+2. Configure Environment Variables
 
 Create a .env file from the example:
 
@@ -52,7 +52,7 @@ OPENAI_API_KEY=your_openai_api_key
 GITHUB_TOKEN=your_github_token
 WEATHER_API_KEY=your_openweather_api_key
 
-▶️ Running the Project (One Command)
+Running the Project (One Command)
 streamlit run main.py
 
 
@@ -60,11 +60,11 @@ The application will be available at:
 
 http://localhost:8501
 
-🧠 Architecture Overview
+ Architecture Overview
 
 The system follows a multi-agent design:
 
-🧩 Planner Agent
+Planner Agent
 
 Converts natural-language input into a structured JSON execution plan
 
@@ -74,7 +74,7 @@ Uses an LLM when available
 
 Falls back to rule-based intent planning if the LLM is unavailable
 
-⚙️ Executor Agent
+Executor Agent
 
 Executes each step in the plan
 
@@ -82,7 +82,7 @@ Calls real third-party APIs
 
 Returns structured results
 
-✅ Verifier Agent
+ Verifier Agent
 
 Validates task completion
 
@@ -90,7 +90,7 @@ Formats the final response
 
 Ensures end-to-end correctness
 
-🛠️ Tools
+Tools
 
 Tools are isolated from agents
 
@@ -98,15 +98,15 @@ Each tool wraps a real external API
 
 No responses are hard-coded
 
-🌐 Integrated APIs
+Integrated APIs
 API	Purpose
 GitHub Search API	Fetch popular Python repositories
 OpenWeather API	Fetch real-time weather data
 
 All data returned by the system is live and real, not mocked.
 
-🧪 Test Cases (Use These to Verify the System)
-🌦️ Weather-Only
+Test Cases (Use These to Verify the System)
+Weather-Only
 
 Tell me today’s weather in Bangalore
 
@@ -116,7 +116,7 @@ How is the weather in New York right now?
 
 What’s the temperature in London?
 
-🐙 GitHub-Only
+ GitHub-Only
 
 Show popular Python GitHub repositories
 
@@ -124,13 +124,13 @@ Find top Python repositories on GitHub
 
 List trending Python projects from GitHub
 
-🔀 Combined (GitHub + Weather)
+ Combined (GitHub + Weather)
 
 Find popular Python GitHub repositories and tell me the weather in Mumbai
 
 Show trending Python projects and today’s weather in Bangalore
 
-⚠️ Known Limitations / Trade-offs
+ Known Limitations / Trade-offs
 
 Tool support is limited to implemented APIs
 
